@@ -70,7 +70,6 @@ header {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  min-height: 110px; /* garantir altura mínima */
 }
 
 /* Header escondido ao rolar para baixo */
@@ -517,10 +516,6 @@ footer {
     margin: 40px 20px 60px;
     padding: 28px 20px;
   }
-  /* Ajuste padding-top no body para não ficar conteúdo embaixo do header */
-  body {
-    padding-top: 140px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -548,10 +543,6 @@ footer {
   section.module-detail {
     padding: 25px 18px;
     font-size: 0.95rem;
-  }
-  /* Ajuste padding-top no body para não ficar conteúdo embaixo do header */
-  body {
-    padding-top: 160px;
   }
 }
 
@@ -654,8 +645,8 @@ body.sem-caixa blockquote {
   background: none;
   box-shadow: none;
 }
-@media (max-width: 768px) {
+@media (max-width: 908px) {
   body {
-    padding-top: 260px !important; /* aumenta o espaço do topo no mobile */
+    padding-top: 500px !important; /* aumenta o espaço do topo no mobile */
   }
 }
