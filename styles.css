@@ -648,8 +648,9 @@ body.sem-caixa blockquote {
   background: none;
   box-shadow: none;
 }
-@media (max-width: 1024px) {
+@media (max-width: 400px) {
   body {
-    padding-top: 130px;
+    padding-top: 330px;
   }
 }
+
