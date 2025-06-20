@@ -648,9 +648,8 @@ body.sem-caixa blockquote {
   background: none;
   box-shadow: none;
 }
-@media (max-width: 400px) {
+@media (max-width: 480px) {
   body {
-    padding-top: 330px;
+    padding-top: 160px; /* Ajuste conforme a altura real do seu header no celular */
   }
 }
-
