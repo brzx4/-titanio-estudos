@@ -648,9 +648,8 @@ body.sem-caixa blockquote {
   background: none;
   box-shadow: none;
 }
-@media (max-width: 454px) {
+@media (max-width: 480px) {
   body {
-    padding-top: 250px !important; /* aumenta o espaço do topo no mobile */
+    padding-top: 150px;
   }
 }
-
