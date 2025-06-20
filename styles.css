@@ -20,14 +20,6 @@ body {
   text-size-adjust: 100%;
   margin: 0;
   padding-top: 110px; /* espaço para o header fixo */
-  overflow-x: hidden; /* evita scroll horizontal */
-}
-
-/* Imagens e vídeos responsivos */
-img, video {
-  max-width: 100%;
-  height: auto;
-  display: block;
 }
 
 /* Loader simples aprimorado */
@@ -96,10 +88,6 @@ header h1 {
   line-height: 1.1;
   cursor: default;
   margin: 0;
-  max-width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 /* Slogan no header */
@@ -113,28 +101,23 @@ header p {
   font-style: italic;
   text-shadow: 0 0 4px #F1C40F;
   user-select: none;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 /* Navegação do header - estilização NOVA dos links */
 nav {
   display: flex;
   gap: 24px;
-  flex-wrap: wrap;
-  max-width: 100%;
-  overflow-x: auto; /* Permite scroll horizontal em telas pequenas */
-  -webkit-overflow-scrolling: touch; /* scroll suave no iOS */
+  flex-wrap: nowrap; /* evitar quebra */
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  
+  /* Esconder barra de rolagem */
+  -ms-overflow-style: none;  /* IE e Edge */
+  scrollbar-width: none;     /* Firefox */
 }
 
 nav::-webkit-scrollbar {
-  height: 6px;
-}
-
-nav::-webkit-scrollbar-thumb {
-  background: #F1C40F;
-  border-radius: 3px;
+  display: none;             /* Chrome, Safari e Opera */
 }
 
 nav a {
@@ -510,15 +493,25 @@ footer {
 }
 
 @media (max-width: 768px) {
+  body {
+    padding-top: 140px; /* espaço maior para header fixo */
+  }
   header {
     padding: 18px 20px 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
   }
   header h1 {
     font-size: 1.7rem;
   }
   header p {
     font-size: 0.9rem;
-    margin-left: 6px;
+    margin-left: 0;
+  }
+  nav {
+    width: 100%;
+    gap: 16px;
   }
   nav a {
     font-size: 1rem;
@@ -546,11 +539,28 @@ footer {
 }
 
 @media (max-width: 480px) {
+  body {
+    padding-top: 140px; /* espaço maior para header fixo */
+  }
+  header {
+    padding: 15px 15px 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
   header h1 {
     font-size: 1.85rem;
   }
   header p {
     font-size: 1rem;
+    margin-left: 0;
+  }
+  nav {
+    gap: 14px;
+  }
+  nav a {
+    font-size: 0.95rem;
+    padding-bottom: 3px;
   }
   .intro h2 {
     font-size: 1.5rem;
