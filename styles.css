@@ -648,7 +648,7 @@ body.sem-caixa blockquote {
   background: none;
   box-shadow: none;
 }
-@media (max-width: 708px) {
+@media (max-width: 354px) {
   body {
     padding-top: 500px !important; /* aumenta o espaço do topo no mobile */
   }
